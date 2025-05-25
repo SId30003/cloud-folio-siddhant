@@ -21,7 +21,7 @@ const ContactSection = () => {
           <div className="space-y-4 mb-10">
             <a href="mailto:siddhant.wadhai@example.com" className="flex items-center justify-center group">
               <Button variant="outline" className="w-full md:w-auto border-lavender text-lavender hover:bg-lavender hover:text-white transition-colors duration-300 group-hover:shadow-lg">
-                <Mail className="mr-2 h-5 w-5" /> siddhant.wadhai@example.com
+                <Mail className="mr-2 h-5 w-5" /> siddhantwadhai20@gmail.com
               </Button>
             </a>
              <Button 
@@ -33,17 +33,15 @@ const ContactSection = () => {
                 <FileText className="mr-2 h-5 w-5" /> Download My Resume
               </a>
             </Button>
-             {resumeLink === "YOUR_GOOGLE_DRIVE_RESUME_LINK_HERE" && (
-              <p className="text-xs text-red-500 mt-1">Please update the resume link in ContactSection.tsx</p>
-            )}
+             {resumeLink === "https://drive.google.com/file/d/1tZLmoSn9UkiqOBjiGxEn4tbjSTr9lICk/view"}
           </div>
 
           <div className="flex justify-center space-x-6">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-lavender transition-colors">
+            <a href="https://www.linkedin.com/in/siddhant-wadhai-518b5524a/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-lavender transition-colors">
               <Linkedin size={28} />
               <span className="sr-only">LinkedIn</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-lavender transition-colors">
+            <a href="https://github.com/SId30003" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-lavender transition-colors">
               <Github size={28} />
               <span className="sr-only">GitHub</span>
             </a>
