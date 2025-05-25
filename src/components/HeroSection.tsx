@@ -11,7 +11,7 @@ const HeroSection = () => {
           <span className="text-lavender">Wadhai</span>
         </h1>
         <p className="text-2xl md:text-3xl text-slate-700 font-medium mb-8">
-          Cloud Enthusiast
+          Cloud Architect & Cloud Solutions
         </p>
         <Button 
           size="lg" 
