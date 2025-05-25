@@ -1,7 +1,8 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
-	darkMode: ["class"],
+	darkMode: ["class"], // Enable class-based dark mode for future implementation
 	content: [
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -25,9 +30,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'hsl(var(--primary))', // This will be our dark text
+					foreground: 'hsl(var(--primary-foreground))' // This will be light text on primary bg
 				},
+        lavender: { // Custom lavender palette
+          light: '#E6E6FA', // Light Lavender
+          DEFAULT: '#9370DB', // MediumPurple (our main lavender)
+          medium: '#8A2BE2', // BlueViolet
+          dark: '#4B0082',   // Indigo
+        },
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
@@ -41,7 +52,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
+					DEFAULT: 'hsl(var(--accent))', // We can use lavender shades here too
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
@@ -84,11 +95,22 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
 			}
 		}
 	},
