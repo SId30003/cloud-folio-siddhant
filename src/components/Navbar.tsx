@@ -1,8 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
+import { Menu, X, Sun, Moon } from 'lucide-react'; // Placeholder for theme toggle icons
 
 const NavItem = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <li>
@@ -11,41 +9,13 @@ const NavItem = ({ href, children }: { href: string; children: React.ReactNode }
       className="text-foreground hover:text-lavender transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
       onClick={(e) => {
         e.preventDefault();
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
       }}
     >
       {children}
     </a>
   </li>
 );
-
-const ThemeToggleButton = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return <Button variant="ghost" size="icon" className="w-9 h-9" disabled><Sun className="h-5 w-5" /></Button>; // Or a placeholder
-  }
-
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 w-9 h-9"
-      aria-label="Toggle theme"
-    >
-      {theme === 'dark' ? <Sun className="h-5 w-5 text-slate-300" /> : <Moon className="h-5 w-5 text-slate-700" />}
-    </Button>
-  );
-};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,27 +44,30 @@ const Navbar = () => {
             <a href="#hero" className="text-2xl font-heading font-bold text-lavender hover:text-lavender-dark transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                const heroElement = document.querySelector('#hero');
-                if (heroElement) {
-                   heroElement.scrollIntoView({ behavior: 'smooth' });
-                }
+                document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               Siddhant Wadhai
             </a>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
-            <ul className="flex items-baseline space-x-1">
+          <div className="hidden md:block">
+            <ul className="ml-10 flex items-baseline space-x-4">
               {navItems.map(item => <NavItem key={item.href} href={item.href}>{item.label}</NavItem>)}
+              {/* Theme toggle placeholder */}
+              {/* <button className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+              </button> */}
             </ul>
-            <ThemeToggleButton />
           </div>
           <div className="md:hidden flex items-center">
-            <ThemeToggleButton />
+            {/* Theme toggle placeholder for mobile */}
+            {/* <button className="p-2 mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+            </button> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 ml-2 rounded-md text-foreground hover:text-lavender hover:bg-lavender/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lavender"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-lavender hover:bg-lavender/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lavender"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -118,4 +91,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
