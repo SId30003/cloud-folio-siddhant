@@ -19,7 +19,7 @@ const ContactSection = () => {
             Feel free to reach out!
           </p>
           <div className="space-y-4 mb-10">
-            <a href="mailto:siddhant.wadhai@example.com" className="flex items-center justify-center group">
+            <a href="mailto:siddhantwadhai20@gmail.com" className="flex items-center justify-center group">
               <Button variant="outline" className="w-full md:w-auto border-lavender text-lavender hover:bg-lavender hover:text-white transition-colors duration-300 group-hover:shadow-lg">
                 <Mail className="mr-2 h-5 w-5" /> siddhantwadhai20@gmail.com
               </Button>
@@ -29,7 +29,7 @@ const ContactSection = () => {
                 className="w-full md:w-auto bg-lavender hover:bg-lavender-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-transform transform hover:scale-105 group-hover:shadow-lg"
                 asChild
               >
-              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+              <a href={https://drive.google.com/file/d/1tZLmoSn9UkiqOBjiGxEn4tbjSTr9lICk/view} target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-5 w-5" /> Download My Resume
               </a>
             </Button>
