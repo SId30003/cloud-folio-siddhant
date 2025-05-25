@@ -69,7 +69,6 @@ const ProjectsSection = () => {
             </Card>
           ))}
         </div>
-        <p className="text-center mt-12 text-slate-600">More projects coming soon! Feel free to update this section.</p>
       </div>
     </section>
   );
