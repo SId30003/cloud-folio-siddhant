@@ -3,15 +3,15 @@ import React from 'react';
 
 const educationData = [
   {
-    institution: 'University of Cloud Technology',
-    degree: 'M.S. in Cloud Computing',
-    years: '2020 - 2022',
+    institution: 'MIT-WPU',
+    degree: 'MCA (Devops Major)',
+    years: '2025 - present',
     description: 'Focused on distributed systems, cloud architecture, and DevOps practices. Graduated with honors.'
   },
   {
-    institution: 'Institute of Engineering Excellence',
-    degree: 'B.Tech in Computer Science',
-    years: '2016 - 2020',
+    institution: 'Hislop College Nagpur',
+    degree: 'BCA',
+    years: '2022 - 2025',
     description: 'Specialized in software development and data structures. Active member of the coding club.'
   },
 ];
