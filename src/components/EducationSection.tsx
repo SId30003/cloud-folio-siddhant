@@ -6,7 +6,7 @@ const educationData = [
     institution: 'MIT-WPU',
     degree: 'MCA (Devops Major)',
     years: '2025 - present',
-    description: 'Focused on distributed systems, cloud architecture, and DevOps practices. Graduated with honors.'
+    description: 'Focused on distributed systems, cloud architecture, and DevOps practices.'
   },
   {
     institution: 'Hislop College Nagpur',
